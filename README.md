@@ -62,5 +62,5 @@ Instructor: Richa Arora
 This project is licensed under the <MIT License.>
 
 ## 👨‍💻 Author
-Franz Leeann U. Ferry
+Franz Leeann U. Ferry  
 GitHub: https://github.com/Finn13Myster
