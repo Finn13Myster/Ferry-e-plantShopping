@@ -42,15 +42,15 @@ npm run dev
 ```
 ## 📂 Project Structure
 
-/src
- ├── components/
- │    ├── ProductList.jsx
- │    ├── CartItem.jsx
- ├── redux/
- │    └── CartSlice.js
- ├── store.js
- ├── App.jsx
- └── main.jsx
+/src__
+ ├── components/__
+ │    ├── ProductList.jsx__
+ │    ├── CartItem.jsx__
+ ├── redux/__
+ │    └── CartSlice.js__
+ ├── store.js__
+ ├── App.jsx__
+ └── main.jsx__
 
  
 ## 🙌 Credits
