@@ -40,7 +40,8 @@ cd your-repo-name
 npm install
 npm run dev
 ```
-#Project Structure
+## 📂 Project Structure
+
 /src
  ├── components/
  │    ├── ProductList.jsx
@@ -52,14 +53,14 @@ npm run dev
  └── main.jsx
 
  
-#🙌 Credits
+## 🙌 Credits
  
 This project was built as part of the IBM Developer Skills Network course.
 Instructor: Richa Arora
 
-#📃 License
+## 📃 License
 This project is licensed under the <MIT License.>
 
-#👨‍💻 Author
+## 👨‍💻 Author
 Franz Leeann U. Ferry
 GitHub: https://github.com/Finn13Myster
