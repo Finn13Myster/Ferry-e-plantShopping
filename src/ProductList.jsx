@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProductList.css';
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from '../CartSlice';
+import { addItem } from './CartSlice';
 
 function ProductList() {
     const dispatch = useDispatch();
@@ -271,48 +271,41 @@ function ProductList() {
     
     return (
         <div>
-          <div className="navbar" style={styleObj}>
-            <div className="tag">
-              <div className="luxury">
-                <img
-                  src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
-                  alt=""
-                  width="50"
-                  height="50"
-                />
-                <a href="/" onClick={handleHomeClick}>
-                  <div>
-                    <h3 style={{ color: 'white' }}>Paradise Nursery</h3>
-                    <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
-                  </div>
-                </a>
+          {/* Navbar */}
+          <div className="navbar">
+            <div className="luxury">
+              <img
+                src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
+                alt="Logo"
+                width="50"
+                height="50"
+              />
+              <div style={{ marginLeft: '10px' }}>
+                <h3>Paradise Nursery</h3>
+                <i>Where Green Meets Serenity</i>
               </div>
             </div>
-            <div style={styleObjUl}>
-              <div><a href="#" onClick={handlePlantsClick} style={styleA}>Plants</a></div>
-              <div>
-                <a href="#" onClick={handleCartClick} style={styleA}>
-                  <h1 className='cart'>
-                    🛒
-                  </h1>
-                </a>
-              </div>
+            <div>
+              <a href="#" onClick={(e) => { e.preventDefault(); setShowCart(false); }}>🌿 Plants</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); setShowCart(true); }}>🛒 Cart</a>
             </div>
           </div>
     
+          {/* Main Section */}
           {!showCart ? (
             <div className="product-grid">
               {plantsArray.map((section) => (
-                <div key={section.category}>
-                  <h2>{section.category}</h2>
-                  <div className="plant-category-grid">
+                <div key={section.category} className="product-section">
+                  <h2 className="plant_heading">{section.category}</h2>
+                  <div className="product-list">
                     {section.plants.map((plant) => (
-                      <div className="plant-card" key={plant.name}>
-                        <img src={plant.image} alt={plant.name} />
-                        <h3>{plant.name}</h3>
+                      <div className="product-card" key={plant.name}>
+                        <img className="product-image" src={plant.image} alt={plant.name} />
+                        <h3 className="product-title">{plant.name}</h3>
                         <p>{plant.description}</p>
-                        <p>{plant.cost}</p>
+                        <p className="product-price">{plant.cost}</p>
                         <button
+                          className={`product-button ${addedToCart[plant.name] ? 'added-to-cart' : ''}`}
                           disabled={addedToCart[plant.name]}
                           onClick={() => handleAddToCart(plant)}
                         >
