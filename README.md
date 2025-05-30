@@ -59,7 +59,7 @@ This project was built as part of the IBM Developer Skills Network course.
 Instructor: Richa Arora
 
 ## 📃 License
-This project is licensed under the <MIT License.>
+This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 Franz Leeann U. Ferry  
